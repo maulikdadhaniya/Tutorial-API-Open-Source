@@ -5,7 +5,7 @@ const cors = require("cors");
 const app = express();
 
 var corsOptions = {
-  origin: "http://localhost:27017"
+  origin: "http://cluster0-shard-00-00.tngpx.mongodb.net:27017"
 };
 
 app.use(cors(corsOptions));
