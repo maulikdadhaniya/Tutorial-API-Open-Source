@@ -1,6 +1,6 @@
 # Tutorial API - Open Source for CRUD operation
 
-## API 
+## API End Point and Params
 
 | Method | End Point | Params | 
 | --- | --- | --- |
@@ -8,5 +8,6 @@
 | GET | api/tutorials |  | 
 | GET | api/tutorials/:Id |  |
 | PUT | api/tutorials/:Id | {"title" : "String","description":"String", "published" : boolean,} |
-| PUT | api/tutorials/:Id | {"title" : "String","description":"String", "published" : boolean,} |
+| GET | api/tutorials/published |  |
 | GET | api/tutorials?title=String |  |
+| DELETE | api/tutorials/:Id |  |
