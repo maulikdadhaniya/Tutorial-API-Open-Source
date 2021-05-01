@@ -43,7 +43,7 @@ const PORT = process.env.MONGODB_URI|| 8080;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}.`);
 });
-mongoose.connect(process.env.MONGODB_URI || 8080, { useNewUrlParser: true })
+mongoose.connect(process.env.MONGODB_URI || 8080)
         .then(connect => console.log('connected to mongodb..'))
         .catch(e => console.log('could not connect to mongodb', e))
 
