@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 const db = require("./app/models");
 db.mongoose
-  .connect("mongodb+srv://maulik-1995:maulik1995@cluster0.tngpx.mongodb.net/tutorial_db", {
+  .connect(db.url, {
     useNewUrlParser: true,
     useUnifiedTopology: true
   })
