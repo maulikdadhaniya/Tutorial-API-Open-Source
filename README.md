@@ -2,7 +2,7 @@
 
 ## API 
 
-| Method | End Point | Params | Description
+| Method | End Point | Params | Description |
 | --- | --- | --- |
 | POST | api/tutorials | {"title" : "String","description":"String"} | Create new tutorial |
 | GET | api/tutorials |  | Get all tutorial |
