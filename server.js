@@ -17,6 +17,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const db = require("./app/models");
+const { mongoose } = require("./app/models");
 db.mongoose
   .connect(db.url, {
     useNewUrlParser: true,
@@ -42,3 +43,8 @@ const PORT = process.env.MONGODB_URI|| 8080;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}.`);
 });
+mongoose.connect(process.env.MONGODB_URI || 8080, { useNewUrlParser: true })
+        .then(connect => console.log('connected to mongodb..'))
+        .catch(e => console.log('could not connect to mongodb', e))
+
+module.exports = {mongoose}
