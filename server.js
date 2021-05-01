@@ -5,7 +5,7 @@ const cors = require("cors");
 const app = express();
 
 var corsOptions = {
-  origin: process.env.MONGODB_URI
+  origin: process.env.PORT
 };
 
 app.use(cors(corsOptions));
@@ -17,7 +17,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const db = require("./app/models");
-const { mongoose } = require("./app/models");
 db.mongoose
   .connect(db.url, {
     useNewUrlParser: true,
@@ -39,12 +38,7 @@ app.get("/", (req, res) => {
 require("./app/routes/tutorial.routes")(app);
 
 // set port, listen for requests
-const PORT = process.env.MONGODB_URI|| 8080;
+const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}.`);
 });
-mongoose.connect(process.env.MONGODB_URI || 8080)
-        .then(connect => console.log('connected to mongodb..'))
-        .catch(e => console.log('could not connect to mongodb', e))
-
-module.exports = {mongoose}
