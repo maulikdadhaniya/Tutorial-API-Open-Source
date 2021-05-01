@@ -10,4 +10,4 @@
 | PUT | api/tutorials/:Id | {"title" : "String","description":"String", "published" : boolean,} |
 | GET | api/tutorials/published |  |
 | GET | api/tutorials?title=String |  |
-| DELETE | api/tutorials/:Id |  |
+| DELETE | api/tutorials/:Id | s |
