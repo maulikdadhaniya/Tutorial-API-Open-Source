@@ -1,3 +1,3 @@
 module.exports = {
-    url: "mongodb+srv://XXXXXXXX:XXXXXXXX@cluster0.tngpx.mongodb.net/tutorial_db"
+    url:"mongodb+srv://maulik-1995:maulik1995@cluster0.tngpx.mongodb.net/tutorial_db"
   };
